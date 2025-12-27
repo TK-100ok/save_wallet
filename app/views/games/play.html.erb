@@ -1,10 +1,24 @@
-<h2><%= session[:turn] %> 人目の子供が来ました！</h2>
-<p>残金：<%= session[:money] %> 円</p>
+<div class="text-center">
 
-<%= form_with url: choose_path, method: :post do %>
-  <% [0, 1000, 3000, 5000, 10000].each do |amount| %>
-    <button name="amount" value="<%= amount %>" class="border p-2 m-2">
-      <%= amount == 0 ? "渡さない" : "#{amount}円" %>
-    </button>
-  <% end %>
-<% end %>
+  <h2 class="text-2xl font-bold mb-4">
+    <%= @child[:name] %> がやってきた！
+  </h2>
+
+  <%# <img src="<%= asset_path(@child[:image]) %>" class="mx-auto mb-4 w-48 h-48 object-cover rounded-full"> %>
+
+  <p class="mb-6 text-lg">
+    「<%= @child[:line] %>」
+  </p>
+
+  <p class="mb-4 font-semibold">
+    現在の所持金: <%= @money %> 円
+  </p>
+
+  <div class="flex flex-col gap-2 max-w-xs mx-auto">
+    <% [0, 1000, 3000, 5000, 10000].each do |amount| %>
+      <%= button_to "#{amount} 円渡す", choose_path(amount: amount),
+          method: :post, class: "bg-blue-500 text-white rounded px-4 py-2" %>
+    <% end %>
+  </div>
+
+</div>
