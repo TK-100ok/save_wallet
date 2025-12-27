@@ -1,0 +1,10 @@
+<h2><%= session[:turn] %> 人目の子供が来ました！</h2>
+<p>残金：<%= session[:money] %> 円</p>
+
+<%= form_with url: choose_path, method: :post do %>
+  <% [0, 1000, 3000, 5000, 10000].each do |amount| %>
+    <button name="amount" value="<%= amount %>" class="border p-2 m-2">
+      <%= amount == 0 ? "渡さない" : "#{amount}円" %>
+    </button>
+  <% end %>
+<% end %>
