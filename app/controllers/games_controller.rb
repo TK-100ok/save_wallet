@@ -73,5 +73,16 @@ class GamesController < ApplicationController
 
   def result
     @money = session[:money]
+
+    @rank =
+    if @money == 26000
+      "S"
+    elsif (20000..25000).include?(@money)
+      "A"
+    elsif (10000..19000).include?(@money)
+      "B"
+    else
+      "C"
+    end
   end
 end
