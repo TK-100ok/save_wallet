@@ -1,4 +1,17 @@
-<div>
-  <h1>お年玉あげたくないよ！</h1>
-  <%= link_to "はじめる", play_path, class: "btn" %>
+<div class="min-h-screen bg-gradient-to-b from-red-700 to-red-900 flex flex-col items-center justify-center text-center px-6">
+
+  <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 drop-shadow-lg mb-10 tracking-widest">
+    💴🎍 お年玉あげたくないよ 🎍💴
+  </h1>
+
+  <p class="text-xl text-yellow-100 mb-12">
+    キミは財布を守れるか…！？<br>
+    子供たちの期待と財布の残高との<br>
+    <span class="font-bold">究極のお年玉バトル！</span>
+  </p>
+
+  <%= link_to "はじめる",
+      play_path,
+      class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-10 rounded-full shadow-xl transition transform hover:-translate-y-1 hover:scale-105" %>
+
 </div>

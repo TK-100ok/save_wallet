@@ -76,13 +76,15 @@ class GamesController < ApplicationController
 
     @rank =
     if @money == 26000
-      "S"
+      "ケチ神様！！"
+    elsif (0..0).include?(@money)
+      "自分より子供に投資するあなたは美しい"
     elsif (20000..25000).include?(@money)
-      "A"
+      "素晴らしいケチっぷり！"
     elsif (10000..19000).include?(@money)
-      "B"
+      "なかなかケチですねあなた"
     else
-      "C"
+      "渡しすぎましたね..."
     end
   end
 end

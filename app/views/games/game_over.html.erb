@@ -1,8 +1,21 @@
-<h1 class="text-3xl font-bold text-center mt-10">ゲームオーバー！</h1>
+<div class="min-h-screen bg-gradient-to-b from-red-950 to-red-700 flex flex-col items-center justify-center px-6">
 
-<p class="text-center mt-4">財布を守りきれませんでした…</p>
+  <h1 class="text-6xl font-extrabold text-yellow-200 drop-shadow-lg tracking-wider mb-8 animate-pulse">
+    子供を泣かせてしまった...
+  </h1>
 
-<div class="text-center mt-6">
-  <%= link_to "もう一度遊ぶ", root_path,
-      class: "bg-red-500 text-white px-4 py-2 rounded" %>
+  <p class="text-2xl text-red-100 font-semibold text-center mb-10">
+    財布を守りたかったんですよね、分かります<br>
+    <span class="opacity-80">(親戚中にケチっぷりが知られてしまいました)</span>
+  </p>
+
+  <%= link_to "もう一度遊ぶ",
+      root_path,
+      class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-10 rounded-full shadow-xl shadow-black/40
+              transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
+
+  <p class="mt-12 text-yellow-100 text-sm opacity-70">
+    ※ 次はもう少し子供に寄り添いましょう
+  </p>
+
 </div>

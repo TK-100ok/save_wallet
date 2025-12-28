@@ -1,24 +1,46 @@
-<div class="text-center">
+<div class="min-h-screen bg-yellow-50 py-10 px-6">
 
-  <h2 class="text-2xl font-bold mb-4">
-    <%= @child[:name] %> がやってきた！
-  </h2>
+  <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl p-6 border border-red-200">
 
-  <%# <img src="<%= asset_path(@child[:image]) %>" class="mx-auto mb-4 w-48 h-48 object-cover rounded-full"> %>
+    <div class="flex flex-col md:flex-row items-center gap-8">
 
-  <p class="mb-6 text-lg">
-    「<%= @child[:line] %>」
-  </p>
+      <!-- 子供の画像 -->
+      <%= image_tag @child[:image],
+          class: "w-48 h-48 md:w-60 md:h-60 object-cover rounded-xl shadow-lg border-4 border-red-300" %>
 
-  <p class="mb-4 font-semibold">
-    現在の所持金: <%= @money %> 円
-  </p>
+      <!-- 子供プロフィール情報 -->
+      <div class="flex-1 bg-red-50 border border-red-200 rounded-xl p-6 shadow-inner">
+        <h2 class="text-3xl font-bold mb-3 text-red-800 tracking-wider">
+          <%= @child[:name] %>（<%= @child[:age] %>歳）
+        </h2>
+
+        <ul class="space-y-2 text-lg text-gray-700">
+          <li><span class="font-bold">性格:</span> <%= @child[:personality] %></li>
+          <li><span class="font-bold">家の事情:</span> <%= @child[:family] %></li>
+          <li><span class="font-bold">最近の様子:</span> <%= @child[:recent] %></li>
+          <li><span class="font-bold">噂:</span> <%= @child[:rumor] %></li>
+        </ul>
+
+        <p class="mt-4 italic text-red-700 font-semibold text-lg">
+          「<%= @child[:line] %>」
+        </p>
+      </div>
+
+    </div>
+
+    <p class="mb-6 text-center text-red-900 font-bold text-xl">
+      現在の所持金：<span class="border-b-4 border-red-600 pb-1"><%= @money %> 円</span>
+    </p>
+
+    <%= form_with url: choose_path, method: :post, class: "flex flex-wrap justify-center gap-3 mt-8" do %>
+      <% [0, 1000, 3000, 5000, 10000].each do |amount| %>
+        <button name="amount" value="<%= amount %>"
+          class="bg-red-800 hover:bg-red-700 text-yellow-100 font-bold py-3 px-6 rounded-lg shadow-md shadow-black/20
+                 transition-transform hover:-translate-y-1 hover:scale-105">
+          <%= amount == 0 ? "渡さない！" : "#{amount}円渡す" %>
+        </button>
+      <% end %>
+    <% end %>
+
+  </div>
 </div>
-
-<%= form_with url: choose_path, method: :post do %>
-  <% [0, 1000, 3000, 5000, 10000].each do |amount| %>
-    <button name="amount" value="<%= amount %>" class="border p-2 m-2">
-      <%= amount == 0 ? "渡さない" : "#{amount}円" %>
-    </button>
-  <% end %>
-<% end %>
