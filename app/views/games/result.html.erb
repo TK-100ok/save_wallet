@@ -7,7 +7,7 @@
     </h1>
 
     <p class="text-2xl mb-6 text-red-900 font-semibold">
-      最終残金：
+      最終残高：
       <span class="text-3xl font-bold border-b-4 border-yellow-300 px-2 pb-1">
         <%= @money %> 円
       </span>
@@ -18,15 +18,15 @@
       <span class="text-yellow-300 text-6xl"><%= @rank %></span>
     </p>
 
+    <p class="text-2xl mb-6 text-red-900 font-semibold mb-10 tracking-wider drop-shadow-md">
+        <%= @message %>
+    </p>
+
     <%= link_to "もう一度遊ぶ",
         root_path,
         class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-8 rounded-full shadow-lg shadow-black/30
                 transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
 
   </div>
-
-  <p class="mt-10 text-yellow-100 text-sm opacity-80">
-    🎍 今年も財布に優しい一年になりますように 🎍
-  </p>
 
 </div>
