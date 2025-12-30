@@ -9,10 +9,21 @@
     <span class="opacity-80">(親戚中にケチっぷりが知られてしまいました)</span>
   </p>
 
-  <%= link_to "もう一度遊ぶ",
-      root_path,
-      class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-10 rounded-full shadow-xl shadow-black/40
-              transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
+  <div class="flex flex-wrap justify-center gap-4 mt-8">
+
+    <%= link_to "もう一度遊ぶ",
+        root_path,
+        class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-8 rounded-full shadow-lg shadow-black/30
+                  transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
+
+    <%= link_to "Xで結果報告",
+        "https://twitter.com/intent/tweet?text=お年玉を子供たちに渡した！%0A結果：「子供を泣かせてしまった...」",
+        target: "_blank",
+        rel: "noopener",
+        class: "bg-black hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-black/30
+                  transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
+  
+  </div>
 
   <p class="mt-12 text-yellow-100 text-sm opacity-70">
     ※ 次はもう少し子供に寄り添いましょう
