@@ -15,7 +15,7 @@
 
     <p class="text-4xl font-extrabold text-red-700 mb-10 tracking-wider drop-shadow-md">
       評価：
-      <span class="text-yellow-300 text-6xl"><%= @rank %></span>
+      <span class="text-yellow-600 text-5xl"><%= @rank %></span>
     </p>
 
     <p class="text-2xl mb-6 text-red-900 font-semibold mb-10 tracking-wider drop-shadow-md">
@@ -25,6 +25,13 @@
     <%= link_to "もう一度遊ぶ",
         root_path,
         class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-4 px-8 rounded-full shadow-lg shadow-black/30
+                transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
+
+    <%= link_to "Xでシェアする",
+      "https://twitter.com/intent/tweet?text=お年玉を子供たちに渡した！%0A結果：「#{@rank}」",
+      target: "_blank",
+      rel: "noopener",
+      class: "bg-black hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-black/30
                 transition-transform hover:-translate-y-1 hover:scale-105 text-xl" %>
 
   </div>

@@ -90,11 +90,11 @@ class GamesController < ApplicationController
     elsif @money == 0
       "仏様！！"
     elsif (28000..32000).include?(@money)
-      "素晴らしいケチっぷり！"
+      "いいケチっぷり！"
     elsif (20000..27000).include?(@money)
-      "なかなかケチですねあなた"
+      "もっとケチれる！"
     else
-      "渡しすぎましたね..."
+      "渡しすぎた..."
     end
 
     @message =
