@@ -1,33 +1,39 @@
-<div class="min-h-screen bg-gradient-to-b from-red-700 to-red-900 flex flex-col items-center justify-center text-center px-4 sm:px-6">
+<div class="min-h-screen bg-gradient-to-b from-red-700 to-red-900 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-8">
 
-  <h1 class="text-4xl sm:text-6xl font-extrabold text-yellow-300 drop-shadow-lg mb-8 sm:mb-10 tracking-widest break-keep">
+  <h1 class="text-3xl sm:text-5xl font-extrabold text-yellow-300 drop-shadow-lg mb-6 sm:mb-8 tracking-widest break-keep leading-tight">
     💴🎍 お年玉あげたくないよ 🎍💴
   </h1>
 
-  <p class="text-base sm:text-xl text-yellow-100 leading-relaxed mb-10 sm:mb-12 break-keep">
+  <p class="text-sm sm:text-lg text-yellow-100 leading-relaxed mb-8 sm:mb-12 break-keep">
     あなたは無職で人にあげるお金なんてほぼありません。<br>
     にも関わらず、正月に親戚の集まりに参加してしまいました。<br>
     そこには期待の眼差しを向ける5人の子供たち。<br><br>
 
-    <span class="font-bold text-yellow-200">大人のプライドをかけたお年玉シミュレーション開幕！</span>
+    <span class="font-bold text-yellow-200 text-base sm:text-xl block">
+      大人のプライドをかけたお年玉シミュレーション開幕！
+    </span>
   </p>
 
   <!-- 遊び方カード -->
-  <div class="w-full max-w-[90%] sm:max-w-2xl bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-red-300 p-6 sm:p-8 mb-8 sm:mb-10">
+<div class="w-full max-w-[95%] sm:max-w-2xl bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-red-300 p-4 sm:p-8 mb-6 sm:mb-10">
 
-    <h2 class="text-2xl sm:text-3xl font-bold text-red-800 mb-4 sm:mb-6 text-center border-b-2 border-red-300 pb-2 break-keep">
-      🎮 遊び方
-    </h2>
+  <h2 class="text-xl sm:text-3xl font-bold text-red-800 mb-4 sm:mb-6 text-center border-b-2 border-red-300 pb-2 break-keep">
+    🎮 遊び方
+  </h2>
 
-    <ul class="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed text-gray-800 break-keep">
-      <li>・順番に来る5人の子供にはそれぞれ<span class="font-bold text-red-700">最適額</span> が設定してあります</li>
-      <li>・子供の情報を頼りに<span class="font-bold text-red-700">5つの選択肢</span> から金額を選びましょう！</li>
-      <li>・できるだけ金額をケチって最終残高を多く残し目指せケチ神！</li>
-    </ul>
-  </div>
+  <ul class="space-y-3 sm:space-y-4 text-sm sm:text-lg leading-relaxed text-gray-800 break-keep">
+    <li>・順番に来る5人の子供にはそれぞれ<span class="font-bold text-red-700">最適額</span> が設定してあります</li>
+    <li>・子供の情報を頼りに <span class="font-bold text-red-700">5つの選択肢</span> から金額を選びましょう！</li>
+    <li>・できるだけ金額をケチって最終残高を多く残し、目指せ <span class="font-bold text-red-700">ケチ神</span>！</li>
+  </ul>
+  
+</div>
+
 
   <%= link_to "はじめる",
       play_path,
-      class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full shadow-xl transition transform hover:-translate-y-1 hover:scale-105 text-base sm:text-xl" %>
+      class: "bg-yellow-300 hover:bg-yellow-400 text-red-900 font-bold
+             py-3 sm:py-4 px-6 sm:px-10 rounded-full shadow-xl transition-transform
+             hover:-translate-y-1 hover:scale-105 text-lg sm:text-2xl w-4/5 sm:w-auto" %>
 
 </div>
