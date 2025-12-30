@@ -27,7 +27,7 @@ module ChildrenData
     {
       name: "最近産まれた兄の子供", age: 0, image: "kids/kid5.png",
       line: "☺️",
-      impress: "お金という概念がまだ存在しない純粋な赤ちゃんだ...",
+      impress: "お金という概念がまだ存在しない純粋な赤ちゃんだ...0歳にお金なんていらな...あれ？出産祝い渡してないな！？",
       optimal: 10000
     }
   ]
