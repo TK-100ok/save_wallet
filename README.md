@@ -1,24 +1,24 @@
-# README
+# お年玉あげたくないよ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリを作った理由
+・アプリを公開したことが無く、勉強になると思ったため。
+・公開することで頂いたフィードバックを、今後作る物にも活かしていきたいと考えたため
 
-Things you may want to cover:
+## アプリ概要
+お正月、親戚の子供たちが期待の眼差しであなたを見つめています。
+しかしあなたは無職…！ お金はない！
 
-* Ruby version
+子供の情報をヒントに 最適なお年玉額を推測しながら
+できる限り 所持金を守りつつプライドも失わない、
+そんな葛藤を楽しむミニゲームです。
 
-* System dependencies
+## 遊び方
+1. 5人 の子供が順番に登場
+2. それぞれに 最適額 が設定されています
+3. 子供の情報から最適額を推測し 5つの選択肢 から選びます
+4. 最終的に どれだけお金を残せたか で評価がします
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用技術
+・Ruby on Rails
+・Tailwind CSS
+・Render
